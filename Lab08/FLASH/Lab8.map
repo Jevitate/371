@@ -1,0 +1,153 @@
+*** EVALUATION ***
+PROGRAM "Lab8.abs"
+
+*********************************************************************************************
+TARGET SECTION
+---------------------------------------------------------------------------------------------
+Processor   : Freescale HC08
+Memory Model: SMALL
+File Format : ELF\DWARF 2.0
+Linker      : SmartLinker V-5.0.53 Build 17146, May 27 2017
+
+*********************************************************************************************
+FILE SECTION
+---------------------------------------------------------------------------------------------
+main_asm.obj                            Model: SMALL,         Lang: Assembler,     Compiler Version: Assembler for HC08 V-5.0.30 Build 17146, May 27 2017
+
+*********************************************************************************************
+STARTUP SECTION
+---------------------------------------------------------------------------------------------
+Entry point: 0xE000 (_Startup)
+
+*********************************************************************************************
+SECTION-ALLOCATION SECTION
+Section Name                    Size  Type     From       To       Segment
+---------------------------------------------------------------------------------------------
+main_asm__ORG00001                 4   R/W       0x60       0x63   .absSeg0
+main_asm__ORG00002               278     R     0xE000     0xE115   .absSeg1
+.stack                            64   R/W      0x100      0x13F   RAM
+.vectSeg2_vect                     2     R     0xFFFE     0xFFFF   .vectSeg2
+
+Summary of section sizes per section type:
+READ_ONLY (R):         118 (dec:      280)
+READ_WRITE (R/W):       44 (dec:       68)
+
+*********************************************************************************************
+VECTOR-ALLOCATION SECTION
+    Address     InitValue   InitFunction
+---------------------------------------------------------------------------------------------
+     0xFFFE        0xE000   _Startup
+
+*********************************************************************************************
+OBJECT-ALLOCATION SECTION
+     Name               Module                 Addr   hSize   dSize     Ref    Section   RLIB
+---------------------------------------------------------------------------------------------
+MODULE:                 -- main_asm.obj --
+- PROCEDURES:
+     _Startup                                  E000      3A      58       0   .init       
+     main                                      E000       0       0       0   .init       
+     SendIt                                    E03A      30      48       0   .init       
+     I2CRxByte                                 E06A       4       4       0   .init       
+     I2CNextBitR                               E06E       D      13       0   .init       
+     SendLowR                                  E07B       8       8       0   .init       
+     I2CRxCont                                 E083       8       8       0   .init       
+     I2CAckPollR                               E08B      14      20       0   .init       
+     I2CNoAckR                                 E09F       B      11       0   .init       
+     I2CStopBitR                               E0AA       6       6       0   .init       
+     GottaGetEmBoth                            E0B0       6       6       0   .init       
+     I2CTxByte                                 E0B6       4       4       0   .init       
+     I2CNextBit                                E0BA       F      15       0   .init       
+     SendLow                                   E0C9       A      10       0   .init       
+     I2CTxCont                                 E0D3       8       8       0   .init       
+     I2CAckPoll                                E0DB      14      20       0   .init       
+     I2CNoAck                                  E0EF       5       5       0   .init       
+     I2CStartBit                               E0F4       8       8       0   .init       
+     I2CStopBit                                E0FC       A      10       0   .init       
+     I2CSetupDelay                             E106       5       5       0   .init       
+     I2CBitDelay                               E10B       5       5       0   .init       
+     SlaveSeconds                              E110       6       6       0   .init       
+- VARIABLES:
+     BitCounter                                  60       1       1       0   .text       
+     Value                                       61       1       1       0   .text       
+     Direction                                   62       1       1       0   .text       
+     Counter                                     63       1       1       0   .text       
+
+*********************************************************************************************
+MODULE STATISTIC
+  Name                                      Data   Code  Const
+---------------------------------------------------------------------------------------------
+  main_asm.obj                                 4    278      0
+  other                                       64      2      0
+
+*********************************************************************************************
+SECTION USE IN OBJECT-ALLOCATION SECTION
+---------------------------------------------------------------------------------------------
+SECTION: ".text"
+  BitCounter Value Direction Counter 
+SECTION: ".init"
+  main _Startup SendIt I2CRxByte I2CNextBitR SendLowR I2CRxCont I2CAckPollR 
+  I2CNoAckR I2CStopBitR GottaGetEmBoth I2CTxByte I2CNextBit SendLow I2CTxCont 
+  I2CAckPoll I2CNoAck I2CStartBit I2CStopBit I2CSetupDelay I2CBitDelay 
+  SlaveSeconds 
+
+*********************************************************************************************
+OBJECT LIST SORTED BY ADDRESS
+     Name                                      Addr   hSize   dSize     Ref    Section   RLIB
+---------------------------------------------------------------------------------------------
+     BitCounter                                  60       1       1       0   .text       
+     Value                                       61       1       1       0   .text       
+     Direction                                   62       1       1       0   .text       
+     Counter                                     63       1       1       0   .text       
+     main                                      E000       0       0       0   .init       
+     _Startup                                  E000      3A      58       0   .init       
+     SendIt                                    E03A      30      48       0   .init       
+     I2CRxByte                                 E06A       4       4       0   .init       
+     I2CNextBitR                               E06E       D      13       0   .init       
+     SendLowR                                  E07B       8       8       0   .init       
+     I2CRxCont                                 E083       8       8       0   .init       
+     I2CAckPollR                               E08B      14      20       0   .init       
+     I2CNoAckR                                 E09F       B      11       0   .init       
+     I2CStopBitR                               E0AA       6       6       0   .init       
+     GottaGetEmBoth                            E0B0       6       6       0   .init       
+     I2CTxByte                                 E0B6       4       4       0   .init       
+     I2CNextBit                                E0BA       F      15       0   .init       
+     SendLow                                   E0C9       A      10       0   .init       
+     I2CTxCont                                 E0D3       8       8       0   .init       
+     I2CAckPoll                                E0DB      14      20       0   .init       
+     I2CNoAck                                  E0EF       5       5       0   .init       
+     I2CStartBit                               E0F4       8       8       0   .init       
+     I2CStopBit                                E0FC       A      10       0   .init       
+     I2CSetupDelay                             E106       5       5       0   .init       
+     I2CBitDelay                               E10B       5       5       0   .init       
+     SlaveSeconds                              E110       6       6       0   .init       
+
+*********************************************************************************************
+UNUSED-OBJECTS SECTION
+---------------------------------------------------------------------------------------------
+
+*********************************************************************************************
+COPYDOWN SECTION
+---------------------------------------------------------------------------------------------
+
+*********************************************************************************************
+OBJECT-DEPENDENCIES SECTION
+---------------------------------------------------------------------------------------------
+
+*********************************************************************************************
+DEPENDENCY TREE
+*********************************************************************************************
+ main and _Startup Group
+ | 
+ +- main                
+ |    
+ +- _Startup            
+      
+*********************************************************************************************
+STATISTIC SECTION
+---------------------------------------------------------------------------------------------
+
+ExeFile:
+--------
+Number of blocks to be downloaded: 2
+Total size of all blocks to be downloaded: 280
+

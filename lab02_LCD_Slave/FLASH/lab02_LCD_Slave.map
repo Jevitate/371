@@ -1,0 +1,245 @@
+*** EVALUATION ***
+PROGRAM "lab02_LCD_Slave.abs"
+
+*********************************************************************************************
+TARGET SECTION
+---------------------------------------------------------------------------------------------
+Processor   : Freescale HC08
+Memory Model: SMALL
+File Format : ELF\DWARF 2.0
+Linker      : SmartLinker V-5.0.53 Build 17146, May 27 2017
+
+*********************************************************************************************
+FILE SECTION
+---------------------------------------------------------------------------------------------
+main_asm.obj                            Model: SMALL,         Lang: Assembler,     Compiler Version: Assembler for HC08 V-5.0.30 Build 17146, May 27 2017
+
+*********************************************************************************************
+STARTUP SECTION
+---------------------------------------------------------------------------------------------
+Entry point: 0xE01A (_Startup)
+
+*********************************************************************************************
+SECTION-ALLOCATION SECTION
+Section Name                    Size  Type     From       To       Segment
+---------------------------------------------------------------------------------------------
+main_asm__ORG00001                 5   R/W       0x60       0x64   .absSeg0
+main_asm__ORG00002               713     R     0xE000     0xE2C8   .absSeg1
+.stack                            64   R/W      0x100      0x13F   RAM
+.vectSeg2_vect                     2     R     0xFFDC     0xFFDD   .vectSeg2
+.vectSeg3_vect                     2     R     0xFFFE     0xFFFF   .vectSeg3
+
+Summary of section sizes per section type:
+READ_ONLY (R):         2CD (dec:      717)
+READ_WRITE (R/W):       45 (dec:       69)
+
+*********************************************************************************************
+VECTOR-ALLOCATION SECTION
+    Address     InitValue   InitFunction
+---------------------------------------------------------------------------------------------
+     0xFFDC        0xE227   _Viic
+     0xFFFE        0xE01A   _Startup
+
+*********************************************************************************************
+OBJECT-ALLOCATION SECTION
+     Name               Module                 Addr   hSize   dSize     Ref    Section   RLIB
+---------------------------------------------------------------------------------------------
+MODULE:                 -- main_asm.obj --
+- PROCEDURES:
+     MSG1                                      E000       8       8       0   .init       
+     VAR00001                                  E008       1       1       0   .init       
+     MSG2                                      E009      10      16       0   .init       
+     VAR00002                                  E019       1       1       0   .init       
+     _Startup                                  E01A      72     114       0   .init       
+     main                                      E01A       0       0       0   .init       
+     mainLoop                                  E08C       9       9       0   .init       
+     GiveMeAnA                                 E095      11      17       0   .init       
+     JUMP1                                     E0A6       7       7       0   .init       
+     GiveMeAB                                  E0AD       E      14       0   .init       
+     JUMP2                                     E0BB       7       7       0   .init       
+     GiveMeAC                                  E0C2       E      14       0   .init       
+     JUMP3                                     E0D0       7       7       0   .init       
+     GiveMeAD                                  E0D7       E      14       0   .init       
+     JUMP4                                     E0E5       7       7       0   .init       
+     GiveMeAE                                  E0EC      10      16       0   .init       
+     MIDDLE                                    E0FC       2       2       0   .init       
+     JUMP5                                     E0FE       7       7       0   .init       
+     GiveMeAF                                  E105       E      14       0   .init       
+     JUMP6                                     E113       7       7       0   .init       
+     GiveMeA1                                  E11A       E      14       0   .init       
+     JUMP7                                     E128       7       7       0   .init       
+     GiveMeA2                                  E12F       E      14       0   .init       
+     JUMP8                                     E13D       7       7       0   .init       
+     GiveMeA3                                  E144       E      14       0   .init       
+     JUMP9                                     E152       7       7       0   .init       
+     GiveMeA4                                  E159      10      16       0   .init       
+     MIDDLE1                                   E169       2       2       0   .init       
+     JUMP10                                    E16B       7       7       0   .init       
+     GiveMeA5                                  E172       E      14       0   .init       
+     JUMP11                                    E180       7       7       0   .init       
+     GiveMeA6                                  E187       E      14       0   .init       
+     JUMP12                                    E195       7       7       0   .init       
+     GiveMeA7                                  E19C       E      14       0   .init       
+     JUMP13                                    E1AA       7       7       0   .init       
+     GiveMeA8                                  E1B1      10      16       0   .init       
+     MIDDLE2                                   E1C1       2       2       0   .init       
+     JUMP14                                    E1C3       7       7       0   .init       
+     GiveMeA9                                  E1CA       E      14       0   .init       
+     JUMP15                                    E1D8       A      10       0   .init       
+     GiveMeA0                                  E1E2       E      14       0   .init       
+     VAR_DELAY                                 E1F0       2       2       0   .init       
+     L1                                        E1F2       8       8       0   .init       
+     LCD_WRITE                                 E1FA       9       9       0   .init       
+     L2                                        E203       F      15       0   .init       
+     L4                                        E212       6       6       0   .init       
+     IIC_Startup_slave                         E218       F      15       0   .init       
+     _Viic                                     E227       9       9       0   .init       
+     Viic_slave                                E230       A      10       0   .init       
+     Viic_slave_iaas                           E23A       8       8       0   .init       
+     Viic_slave_iaas2                          E242       7       7       0   .init       
+     Viic_slave_srw                            E249       8       8       0   .init       
+     Viic_slave_setTx                          E251       C      12       0   .init       
+     Viic_slave_setRx                          E25D       9       9       0   .init       
+     Viic_slave_txRx                           E266       8       8       0   .init       
+     Viic_slave_ack                            E26E       8       8       0   .init       
+     Viic_slave_read                           E276       B      11       0   .init       
+     DebugBounce                               E281       5       5       0   .init       
+     loop9                                     E286       5       5       0   .init       
+     loop10                                    E28B      18      24       0   .init       
+     loop1                                     E2A3       5       5       0   .init       
+     loop2                                     E2A8       5       5       0   .init       
+     loop3                                     E2AD      1C      28       0   .init       
+- VARIABLES:
+     IIC_addr                                    60       1       1       0   .text       
+     msgLength                                   61       1       1       0   .text       
+     current                                     62       1       1       0   .text       
+     IIC_MSG                                     63       1       1       0   .text       
+     TIME                                        64       1       1       0   .text       
+- LABELS:
+     __SEG_END_SSTACK                           140       0       0       1               
+
+*********************************************************************************************
+MODULE STATISTIC
+  Name                                      Data   Code  Const
+---------------------------------------------------------------------------------------------
+  main_asm.obj                                 5    713      0
+  other                                       64      4      0
+
+*********************************************************************************************
+SECTION USE IN OBJECT-ALLOCATION SECTION
+---------------------------------------------------------------------------------------------
+SECTION: ".text"
+  IIC_addr msgLength current IIC_MSG TIME 
+SECTION: ".init"
+  MSG1 VAR00001 MSG2 VAR00002 main _Startup mainLoop GiveMeAnA JUMP1 GiveMeAB 
+  JUMP2 GiveMeAC JUMP3 GiveMeAD JUMP4 GiveMeAE MIDDLE JUMP5 GiveMeAF JUMP6 
+  GiveMeA1 JUMP7 GiveMeA2 JUMP8 GiveMeA3 JUMP9 GiveMeA4 MIDDLE1 JUMP10 GiveMeA5 
+  JUMP11 GiveMeA6 JUMP12 GiveMeA7 JUMP13 GiveMeA8 MIDDLE2 JUMP14 GiveMeA9 
+  JUMP15 GiveMeA0 VAR_DELAY L1 LCD_WRITE L2 L4 IIC_Startup_slave _Viic 
+  Viic_slave Viic_slave_iaas Viic_slave_iaas2 Viic_slave_srw Viic_slave_setTx 
+  Viic_slave_setRx Viic_slave_txRx Viic_slave_ack Viic_slave_read DebugBounce 
+  loop9 loop10 loop1 loop2 loop3 
+
+*********************************************************************************************
+OBJECT LIST SORTED BY ADDRESS
+     Name                                      Addr   hSize   dSize     Ref    Section   RLIB
+---------------------------------------------------------------------------------------------
+     IIC_addr                                    60       1       1       0   .text       
+     msgLength                                   61       1       1       0   .text       
+     current                                     62       1       1       0   .text       
+     IIC_MSG                                     63       1       1       0   .text       
+     TIME                                        64       1       1       0   .text       
+     MSG1                                      E000       8       8       0   .init       
+     VAR00001                                  E008       1       1       0   .init       
+     MSG2                                      E009      10      16       0   .init       
+     VAR00002                                  E019       1       1       0   .init       
+     main                                      E01A       0       0       0   .init       
+     _Startup                                  E01A      72     114       0   .init       
+     mainLoop                                  E08C       9       9       0   .init       
+     GiveMeAnA                                 E095      11      17       0   .init       
+     JUMP1                                     E0A6       7       7       0   .init       
+     GiveMeAB                                  E0AD       E      14       0   .init       
+     JUMP2                                     E0BB       7       7       0   .init       
+     GiveMeAC                                  E0C2       E      14       0   .init       
+     JUMP3                                     E0D0       7       7       0   .init       
+     GiveMeAD                                  E0D7       E      14       0   .init       
+     JUMP4                                     E0E5       7       7       0   .init       
+     GiveMeAE                                  E0EC      10      16       0   .init       
+     MIDDLE                                    E0FC       2       2       0   .init       
+     JUMP5                                     E0FE       7       7       0   .init       
+     GiveMeAF                                  E105       E      14       0   .init       
+     JUMP6                                     E113       7       7       0   .init       
+     GiveMeA1                                  E11A       E      14       0   .init       
+     JUMP7                                     E128       7       7       0   .init       
+     GiveMeA2                                  E12F       E      14       0   .init       
+     JUMP8                                     E13D       7       7       0   .init       
+     GiveMeA3                                  E144       E      14       0   .init       
+     JUMP9                                     E152       7       7       0   .init       
+     GiveMeA4                                  E159      10      16       0   .init       
+     MIDDLE1                                   E169       2       2       0   .init       
+     JUMP10                                    E16B       7       7       0   .init       
+     GiveMeA5                                  E172       E      14       0   .init       
+     JUMP11                                    E180       7       7       0   .init       
+     GiveMeA6                                  E187       E      14       0   .init       
+     JUMP12                                    E195       7       7       0   .init       
+     GiveMeA7                                  E19C       E      14       0   .init       
+     JUMP13                                    E1AA       7       7       0   .init       
+     GiveMeA8                                  E1B1      10      16       0   .init       
+     MIDDLE2                                   E1C1       2       2       0   .init       
+     JUMP14                                    E1C3       7       7       0   .init       
+     GiveMeA9                                  E1CA       E      14       0   .init       
+     JUMP15                                    E1D8       A      10       0   .init       
+     GiveMeA0                                  E1E2       E      14       0   .init       
+     VAR_DELAY                                 E1F0       2       2       0   .init       
+     L1                                        E1F2       8       8       0   .init       
+     LCD_WRITE                                 E1FA       9       9       0   .init       
+     L2                                        E203       F      15       0   .init       
+     L4                                        E212       6       6       0   .init       
+     IIC_Startup_slave                         E218       F      15       0   .init       
+     _Viic                                     E227       9       9       0   .init       
+     Viic_slave                                E230       A      10       0   .init       
+     Viic_slave_iaas                           E23A       8       8       0   .init       
+     Viic_slave_iaas2                          E242       7       7       0   .init       
+     Viic_slave_srw                            E249       8       8       0   .init       
+     Viic_slave_setTx                          E251       C      12       0   .init       
+     Viic_slave_setRx                          E25D       9       9       0   .init       
+     Viic_slave_txRx                           E266       8       8       0   .init       
+     Viic_slave_ack                            E26E       8       8       0   .init       
+     Viic_slave_read                           E276       B      11       0   .init       
+     DebugBounce                               E281       5       5       0   .init       
+     loop9                                     E286       5       5       0   .init       
+     loop10                                    E28B      18      24       0   .init       
+     loop1                                     E2A3       5       5       0   .init       
+     loop2                                     E2A8       5       5       0   .init       
+     loop3                                     E2AD      1C      28       0   .init       
+
+*********************************************************************************************
+UNUSED-OBJECTS SECTION
+---------------------------------------------------------------------------------------------
+
+*********************************************************************************************
+COPYDOWN SECTION
+---------------------------------------------------------------------------------------------
+
+*********************************************************************************************
+OBJECT-DEPENDENCIES SECTION
+---------------------------------------------------------------------------------------------
+
+*********************************************************************************************
+DEPENDENCY TREE
+*********************************************************************************************
+ main and _Startup Group
+ | 
+ +- main                
+ |    
+ +- _Startup            
+      
+*********************************************************************************************
+STATISTIC SECTION
+---------------------------------------------------------------------------------------------
+
+ExeFile:
+--------
+Number of blocks to be downloaded: 3
+Total size of all blocks to be downloaded: 717
+

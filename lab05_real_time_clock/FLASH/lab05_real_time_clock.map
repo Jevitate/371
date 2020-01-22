@@ -1,0 +1,235 @@
+*** EVALUATION ***
+PROGRAM "lab05_real_time_clock.abs"
+
+*********************************************************************************************
+TARGET SECTION
+---------------------------------------------------------------------------------------------
+Processor   : Freescale HC08
+Memory Model: SMALL
+File Format : ELF\DWARF 2.0
+Linker      : SmartLinker V-5.0.53 Build 17146, May 27 2017
+
+*********************************************************************************************
+FILE SECTION
+---------------------------------------------------------------------------------------------
+main_asm.obj                            Model: SMALL,         Lang: Assembler,     Compiler Version: Assembler for HC08 V-5.0.30 Build 17146, May 27 2017
+
+*********************************************************************************************
+STARTUP SECTION
+---------------------------------------------------------------------------------------------
+Entry point: 0xE00C (_Startup)
+
+*********************************************************************************************
+SECTION-ALLOCATION SECTION
+Section Name                    Size  Type     From       To       Segment
+---------------------------------------------------------------------------------------------
+main_asm__ORG00001                25   R/W       0x60       0x78   .absSeg0
+main_asm__ORG00002               663     R     0xE000     0xE296   .absSeg1
+.stack                            64   R/W      0x100      0x13F   RAM
+.vectSeg2_vect                     4     R     0xFFDA     0xFFDD   .vectSeg2
+.vectSeg3_vect                     2     R     0xFFFE     0xFFFF   .vectSeg3
+
+Summary of section sizes per section type:
+READ_ONLY (R):         29D (dec:      669)
+READ_WRITE (R/W):       59 (dec:       89)
+
+*********************************************************************************************
+VECTOR-ALLOCATION SECTION
+    Address     InitValue   InitFunction
+---------------------------------------------------------------------------------------------
+     0xFFDA        0xE26D   Column
+     0xFFDC        0xE1C5   _Viic
+     0xFFFE        0xE00C   _Startup
+
+*********************************************************************************************
+OBJECT-ALLOCATION SECTION
+     Name               Module                 Addr   hSize   dSize     Ref    Section   RLIB
+---------------------------------------------------------------------------------------------
+MODULE:                 -- main_asm.obj --
+- PROCEDURES:
+     AddressWrite                              E000       6       6       0   .init       
+     AddressRead                               E006       6       6       0   .init       
+     _Startup                                  E00C      58      88       0   .init       
+     main                                      E00C       0       0       0   .init       
+     mainLoop                                  E064      1C      28       0   .init       
+     firstbit                                  E080       F      15       0   .init       
+     looper                                    E08F       C      12       0   .init       
+     secondbit                                 E09B       C      12       0   .init       
+     Begin                                     E0A7      2F      47       0   .init       
+     END                                       E0D6      22      34       0   .init       
+     END2                                      E0F8      1D      29       0   .init       
+     ReadModeFlag                              E115       6       6       0   .init       
+     ReadMode                                  E11B      39      57       0   .init       
+     Acquire                                   E154      21      33       0   .init       
+     GiveMeA1                                  E175       8       8       0   .init       
+     GiveMeA2                                  E17D       8       8       0   .init       
+     GiveMeA3                                  E185       8       8       0   .init       
+     GiveMeA4                                  E18D       8       8       0   .init       
+     GiveMeA5                                  E195       8       8       0   .init       
+     GiveMeA6                                  E19D       8       8       0   .init       
+     GiveMeA7                                  E1A5       8       8       0   .init       
+     GiveMeA8                                  E1AD       8       8       0   .init       
+     GiveMeA9                                  E1B5       8       8       0   .init       
+     GiveMeA0                                  E1BD       8       8       0   .init       
+     _Viic                                     E1C5       8       8       0   .init       
+     Viic_master                               E1CD       5       5       0   .init       
+     Viic_master_TX                            E1D2       B      11       0   .init       
+     Viic_master_rxAck                         E1DD       9       9       0   .init       
+     Viic_master_EoAC                          E1E6      12      18       0   .init       
+     Viic_master_toRxMode                      E1F8       5       5       0   .init       
+     Viic_master_RX                            E1FD       D      13       0   .init       
+     Viic_master_rxStop                        E20A       4       4       0   .init       
+     Viic_master_txAck                         E20E       4       4       0   .init       
+     Viic_master_readData                      E212       D      13       0   .init       
+     IIC_Startup_Master                        E21F       9       9       0   .init       
+     IIC_DataWrite                             E228       B      11       0   .init       
+     Delay                                     E233       5       5       0   .init       
+     loop1                                     E238       5       5       0   .init       
+     loop2                                     E23D      13      19       0   .init       
+     DebugBounce                               E250       5       5       0   .init       
+     loop3                                     E255       5       5       0   .init       
+     loop4                                     E25A      13      19       0   .init       
+     Column                                    E26D      2A      42       0   .init       
+- VARIABLES:
+     RowPress                                    60       1       1       0   .text       
+     ColumnPress                                 61       1       1       0   .text       
+     Total                                       62       1       1       0   .text       
+     Flag                                        63       1       1       0   .text       
+     Number                                      64       1       1       0   .text       
+     AddressCount                                65       1       1       0   .text       
+     InterruptFlag                               66       1       1       0   .text       
+     KeyPadStorage                               67       1       1       0   .text       
+     IndexCount                                  68       1       1       0   .text       
+     IndexPosition                               69       1       1       0   .text       
+     FirstFour                                   6A       1       1       0   .text       
+     SecondFour                                  6B       1       1       0   .text       
+     Redrum                                      6C       1       1       0   .text       
+     FullKeypad                                  6D       1       1       0   .text       
+     IIC_addr                                    6E       1       1       0   .text       
+     IIC_LCD                                     6F       1       1       0   .text       
+     msgLength                                   70       1       1       0   .text       
+     current                                     71       1       1       0   .text       
+     IIC_msg                                     72       7       7       0   .text       
+- LABELS:
+     __SEG_END_SSTACK                           140       0       0       1               
+
+*********************************************************************************************
+MODULE STATISTIC
+  Name                                      Data   Code  Const
+---------------------------------------------------------------------------------------------
+  main_asm.obj                                25    663      0
+  other                                       64      6      0
+
+*********************************************************************************************
+SECTION USE IN OBJECT-ALLOCATION SECTION
+---------------------------------------------------------------------------------------------
+SECTION: ".text"
+  RowPress ColumnPress Total Flag Number AddressCount InterruptFlag 
+  KeyPadStorage IndexCount IndexPosition FirstFour SecondFour Redrum FullKeypad 
+  IIC_addr IIC_LCD msgLength current IIC_msg 
+SECTION: ".init"
+  AddressWrite AddressRead main _Startup mainLoop firstbit looper secondbit 
+  Begin END END2 ReadModeFlag ReadMode Acquire GiveMeA1 GiveMeA2 GiveMeA3 
+  GiveMeA4 GiveMeA5 GiveMeA6 GiveMeA7 GiveMeA8 GiveMeA9 GiveMeA0 _Viic 
+  Viic_master Viic_master_TX Viic_master_rxAck Viic_master_EoAC 
+  Viic_master_toRxMode Viic_master_RX Viic_master_rxStop Viic_master_txAck 
+  Viic_master_readData IIC_Startup_Master IIC_DataWrite Delay loop1 loop2 
+  DebugBounce loop3 loop4 Column 
+
+*********************************************************************************************
+OBJECT LIST SORTED BY ADDRESS
+     Name                                      Addr   hSize   dSize     Ref    Section   RLIB
+---------------------------------------------------------------------------------------------
+     RowPress                                    60       1       1       0   .text       
+     ColumnPress                                 61       1       1       0   .text       
+     Total                                       62       1       1       0   .text       
+     Flag                                        63       1       1       0   .text       
+     Number                                      64       1       1       0   .text       
+     AddressCount                                65       1       1       0   .text       
+     InterruptFlag                               66       1       1       0   .text       
+     KeyPadStorage                               67       1       1       0   .text       
+     IndexCount                                  68       1       1       0   .text       
+     IndexPosition                               69       1       1       0   .text       
+     FirstFour                                   6A       1       1       0   .text       
+     SecondFour                                  6B       1       1       0   .text       
+     Redrum                                      6C       1       1       0   .text       
+     FullKeypad                                  6D       1       1       0   .text       
+     IIC_addr                                    6E       1       1       0   .text       
+     IIC_LCD                                     6F       1       1       0   .text       
+     msgLength                                   70       1       1       0   .text       
+     current                                     71       1       1       0   .text       
+     IIC_msg                                     72       7       7       0   .text       
+     AddressWrite                              E000       6       6       0   .init       
+     AddressRead                               E006       6       6       0   .init       
+     main                                      E00C       0       0       0   .init       
+     _Startup                                  E00C      58      88       0   .init       
+     mainLoop                                  E064      1C      28       0   .init       
+     firstbit                                  E080       F      15       0   .init       
+     looper                                    E08F       C      12       0   .init       
+     secondbit                                 E09B       C      12       0   .init       
+     Begin                                     E0A7      2F      47       0   .init       
+     END                                       E0D6      22      34       0   .init       
+     END2                                      E0F8      1D      29       0   .init       
+     ReadModeFlag                              E115       6       6       0   .init       
+     ReadMode                                  E11B      39      57       0   .init       
+     Acquire                                   E154      21      33       0   .init       
+     GiveMeA1                                  E175       8       8       0   .init       
+     GiveMeA2                                  E17D       8       8       0   .init       
+     GiveMeA3                                  E185       8       8       0   .init       
+     GiveMeA4                                  E18D       8       8       0   .init       
+     GiveMeA5                                  E195       8       8       0   .init       
+     GiveMeA6                                  E19D       8       8       0   .init       
+     GiveMeA7                                  E1A5       8       8       0   .init       
+     GiveMeA8                                  E1AD       8       8       0   .init       
+     GiveMeA9                                  E1B5       8       8       0   .init       
+     GiveMeA0                                  E1BD       8       8       0   .init       
+     _Viic                                     E1C5       8       8       0   .init       
+     Viic_master                               E1CD       5       5       0   .init       
+     Viic_master_TX                            E1D2       B      11       0   .init       
+     Viic_master_rxAck                         E1DD       9       9       0   .init       
+     Viic_master_EoAC                          E1E6      12      18       0   .init       
+     Viic_master_toRxMode                      E1F8       5       5       0   .init       
+     Viic_master_RX                            E1FD       D      13       0   .init       
+     Viic_master_rxStop                        E20A       4       4       0   .init       
+     Viic_master_txAck                         E20E       4       4       0   .init       
+     Viic_master_readData                      E212       D      13       0   .init       
+     IIC_Startup_Master                        E21F       9       9       0   .init       
+     IIC_DataWrite                             E228       B      11       0   .init       
+     Delay                                     E233       5       5       0   .init       
+     loop1                                     E238       5       5       0   .init       
+     loop2                                     E23D      13      19       0   .init       
+     DebugBounce                               E250       5       5       0   .init       
+     loop3                                     E255       5       5       0   .init       
+     loop4                                     E25A      13      19       0   .init       
+     Column                                    E26D      2A      42       0   .init       
+
+*********************************************************************************************
+UNUSED-OBJECTS SECTION
+---------------------------------------------------------------------------------------------
+
+*********************************************************************************************
+COPYDOWN SECTION
+---------------------------------------------------------------------------------------------
+
+*********************************************************************************************
+OBJECT-DEPENDENCIES SECTION
+---------------------------------------------------------------------------------------------
+
+*********************************************************************************************
+DEPENDENCY TREE
+*********************************************************************************************
+ main and _Startup Group
+ | 
+ +- main                
+ |    
+ +- _Startup            
+      
+*********************************************************************************************
+STATISTIC SECTION
+---------------------------------------------------------------------------------------------
+
+ExeFile:
+--------
+Number of blocks to be downloaded: 3
+Total size of all blocks to be downloaded: 669
+

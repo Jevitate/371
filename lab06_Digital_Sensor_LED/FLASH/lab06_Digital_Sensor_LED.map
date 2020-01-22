@@ -1,0 +1,174 @@
+*** EVALUATION ***
+PROGRAM "lab06_Digital_Sensor_LED.abs"
+
+*********************************************************************************************
+TARGET SECTION
+---------------------------------------------------------------------------------------------
+Processor   : Freescale HC08
+Memory Model: SMALL
+File Format : ELF\DWARF 2.0
+Linker      : SmartLinker V-5.0.53 Build 17146, May 27 2017
+
+*********************************************************************************************
+FILE SECTION
+---------------------------------------------------------------------------------------------
+main_asm.obj                            Model: SMALL,         Lang: Assembler,     Compiler Version: Assembler for HC08 V-5.0.30 Build 17146, May 27 2017
+
+*********************************************************************************************
+STARTUP SECTION
+---------------------------------------------------------------------------------------------
+Entry point: 0xE01B (_Startup)
+
+*********************************************************************************************
+SECTION-ALLOCATION SECTION
+Section Name                    Size  Type     From       To       Segment
+---------------------------------------------------------------------------------------------
+main_asm__ORG00001                 9   R/W       0x60       0x68   .absSeg0
+main_asm__ORG00002               260     R     0xE000     0xE103   .absSeg1
+.stack                            64   R/W      0x100      0x13F   RAM
+.vectSeg2_vect                     2     R     0xFFDC     0xFFDD   .vectSeg2
+.vectSeg3_vect                     2     R     0xFFFE     0xFFFF   .vectSeg3
+
+Summary of section sizes per section type:
+READ_ONLY (R):         108 (dec:      264)
+READ_WRITE (R/W):       49 (dec:       73)
+
+*********************************************************************************************
+VECTOR-ALLOCATION SECTION
+    Address     InitValue   InitFunction
+---------------------------------------------------------------------------------------------
+     0xFFDC        0xE06C   _Viic
+     0xFFFE        0xE01B   _Startup
+
+*********************************************************************************************
+OBJECT-ALLOCATION SECTION
+     Name               Module                 Addr   hSize   dSize     Ref    Section   RLIB
+---------------------------------------------------------------------------------------------
+MODULE:                 -- main_asm.obj --
+- PROCEDURES:
+     LookUpStatic                              E000       1       1       0   .init       
+     LookUpSlideRight                          E001       8       8       0   .init       
+     LookUpDiamond                             E009       7       7       0   .init       
+     LookUpArrow                               E010       B      11       0   .init       
+     _Startup                                  E01B      1F      31       0   .init       
+     main                                      E01B       0       0       0   .init       
+     mainLoop                                  E03A       7       7       0   .init       
+     Completed                                 E041       D      13       0   .init       
+     ZERO                                      E04E       A      10       0   .init       
+     ONE                                       E058       A      10       0   .init       
+     TWO                                       E062       A      10       0   .init       
+     _Viic                                     E06C       D      13       0   .init       
+     IIC_Startup_slave                         E079       F      15       0   .init       
+     Viic_slave                                E088       A      10       0   .init       
+     Viic_slave_iaas                           E092       8       8       0   .init       
+     Viic_slave_iaas2                          E09A       7       7       0   .init       
+     Viic_slave_srw                            E0A1       8       8       0   .init       
+     Viic_slave_setTx                          E0A9       C      12       0   .init       
+     Viic_slave_setRx                          E0B5       9       9       0   .init       
+     Viic_slave_txRx                           E0BE       8       8       0   .init       
+     Viic_slave_ack                            E0C6       8       8       0   .init       
+     Viic_slave_read                           E0CE      10      16       0   .init       
+     loop1                                     E0DE       5       5       0   .init       
+     loop2                                     E0E3       5       5       0   .init       
+     loop3                                     E0E8      1C      28       0   .init       
+- VARIABLES:
+     Counter1                                    60       1       1       0   .text       
+     Counter2                                    61       1       1       0   .text       
+     Counter3                                    62       1       1       0   .text       
+     Check                                       63       1       1       0   .text       
+     Flag                                        64       1       1       0   .text       
+     IIC_addr                                    65       1       1       0   .text       
+     msgLength                                   66       1       1       0   .text       
+     current                                     67       1       1       0   .text       
+     IIC_MSG                                     68       1       1       0   .text       
+- LABELS:
+     __SEG_END_SSTACK                           140       0       0       1               
+
+*********************************************************************************************
+MODULE STATISTIC
+  Name                                      Data   Code  Const
+---------------------------------------------------------------------------------------------
+  main_asm.obj                                 9    260      0
+  other                                       64      4      0
+
+*********************************************************************************************
+SECTION USE IN OBJECT-ALLOCATION SECTION
+---------------------------------------------------------------------------------------------
+SECTION: ".text"
+  Counter1 Counter2 Counter3 Check Flag IIC_addr msgLength current IIC_MSG 
+SECTION: ".init"
+  LookUpStatic LookUpSlideRight LookUpDiamond LookUpArrow main _Startup 
+  mainLoop Completed ZERO ONE TWO _Viic IIC_Startup_slave Viic_slave 
+  Viic_slave_iaas Viic_slave_iaas2 Viic_slave_srw Viic_slave_setTx 
+  Viic_slave_setRx Viic_slave_txRx Viic_slave_ack Viic_slave_read loop1 loop2 
+  loop3 
+
+*********************************************************************************************
+OBJECT LIST SORTED BY ADDRESS
+     Name                                      Addr   hSize   dSize     Ref    Section   RLIB
+---------------------------------------------------------------------------------------------
+     Counter1                                    60       1       1       0   .text       
+     Counter2                                    61       1       1       0   .text       
+     Counter3                                    62       1       1       0   .text       
+     Check                                       63       1       1       0   .text       
+     Flag                                        64       1       1       0   .text       
+     IIC_addr                                    65       1       1       0   .text       
+     msgLength                                   66       1       1       0   .text       
+     current                                     67       1       1       0   .text       
+     IIC_MSG                                     68       1       1       0   .text       
+     LookUpStatic                              E000       1       1       0   .init       
+     LookUpSlideRight                          E001       8       8       0   .init       
+     LookUpDiamond                             E009       7       7       0   .init       
+     LookUpArrow                               E010       B      11       0   .init       
+     main                                      E01B       0       0       0   .init       
+     _Startup                                  E01B      1F      31       0   .init       
+     mainLoop                                  E03A       7       7       0   .init       
+     Completed                                 E041       D      13       0   .init       
+     ZERO                                      E04E       A      10       0   .init       
+     ONE                                       E058       A      10       0   .init       
+     TWO                                       E062       A      10       0   .init       
+     _Viic                                     E06C       D      13       0   .init       
+     IIC_Startup_slave                         E079       F      15       0   .init       
+     Viic_slave                                E088       A      10       0   .init       
+     Viic_slave_iaas                           E092       8       8       0   .init       
+     Viic_slave_iaas2                          E09A       7       7       0   .init       
+     Viic_slave_srw                            E0A1       8       8       0   .init       
+     Viic_slave_setTx                          E0A9       C      12       0   .init       
+     Viic_slave_setRx                          E0B5       9       9       0   .init       
+     Viic_slave_txRx                           E0BE       8       8       0   .init       
+     Viic_slave_ack                            E0C6       8       8       0   .init       
+     Viic_slave_read                           E0CE      10      16       0   .init       
+     loop1                                     E0DE       5       5       0   .init       
+     loop2                                     E0E3       5       5       0   .init       
+     loop3                                     E0E8      1C      28       0   .init       
+
+*********************************************************************************************
+UNUSED-OBJECTS SECTION
+---------------------------------------------------------------------------------------------
+
+*********************************************************************************************
+COPYDOWN SECTION
+---------------------------------------------------------------------------------------------
+
+*********************************************************************************************
+OBJECT-DEPENDENCIES SECTION
+---------------------------------------------------------------------------------------------
+
+*********************************************************************************************
+DEPENDENCY TREE
+*********************************************************************************************
+ main and _Startup Group
+ | 
+ +- main                
+ |    
+ +- _Startup            
+      
+*********************************************************************************************
+STATISTIC SECTION
+---------------------------------------------------------------------------------------------
+
+ExeFile:
+--------
+Number of blocks to be downloaded: 3
+Total size of all blocks to be downloaded: 264
+

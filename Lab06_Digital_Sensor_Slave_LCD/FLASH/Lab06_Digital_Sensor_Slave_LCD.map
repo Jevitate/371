@@ -1,0 +1,281 @@
+*** EVALUATION ***
+PROGRAM "Lab06_Digital_Sensor_Slave_LCD.abs"
+
+*********************************************************************************************
+TARGET SECTION
+---------------------------------------------------------------------------------------------
+Processor   : Freescale HC08
+Memory Model: SMALL
+File Format : ELF\DWARF 2.0
+Linker      : SmartLinker V-5.0.53 Build 17146, May 27 2017
+
+*********************************************************************************************
+FILE SECTION
+---------------------------------------------------------------------------------------------
+main_asm.obj                            Model: SMALL,         Lang: Assembler,     Compiler Version: Assembler for HC08 V-5.0.30 Build 17146, May 27 2017
+
+*********************************************************************************************
+STARTUP SECTION
+---------------------------------------------------------------------------------------------
+Entry point: 0xE05A (_Startup)
+
+*********************************************************************************************
+SECTION-ALLOCATION SECTION
+Section Name                    Size  Type     From       To       Segment
+---------------------------------------------------------------------------------------------
+main_asm__ORG00001                16   R/W       0x60       0x6F   .absSeg0
+main_asm__ORG00002               828     R     0xE000     0xE33B   .absSeg1
+.stack                            64   R/W      0x100      0x13F   RAM
+.vectSeg2_vect                     2     R     0xFFDC     0xFFDD   .vectSeg2
+.vectSeg3_vect                     2     R     0xFFFE     0xFFFF   .vectSeg3
+
+Summary of section sizes per section type:
+READ_ONLY (R):         340 (dec:      832)
+READ_WRITE (R/W):       50 (dec:       80)
+
+*********************************************************************************************
+VECTOR-ALLOCATION SECTION
+    Address     InitValue   InitFunction
+---------------------------------------------------------------------------------------------
+     0xFFDC        0xE2D7   _Viic
+     0xFFFE        0xE05A   _Startup
+
+*********************************************************************************************
+OBJECT-ALLOCATION SECTION
+     Name               Module                 Addr   hSize   dSize     Ref    Section   RLIB
+---------------------------------------------------------------------------------------------
+MODULE:                 -- main_asm.obj --
+- PROCEDURES:
+     MSG1                                      E000      10      16       0   .init       
+     VAR00001                                  E010       1       1       0   .init       
+     MSG2                                      E011       F      15       0   .init       
+     VAR00002                                  E020       1       1       0   .init       
+     MSG3                                      E021      10      16       0   .init       
+     VAR00003                                  E031       1       1       0   .init       
+     MSG4                                      E032      10      16       0   .init       
+     VAR00004                                  E042       1       1       0   .init       
+     MSG5                                      E043      10      16       0   .init       
+     VAR00005                                  E053       1       1       0   .init       
+     MSG6                                      E054       4       4       0   .init       
+     VAR00006                                  E058       1       1       0   .init       
+     AddressWrite                              E059       1       1       0   .init       
+     _Startup                                  E05A      90     144       0   .init       
+     main                                      E05A       0       0       0   .init       
+     mainLoop                                  E0EA       7       7       0   .init       
+     completed                                 E0F1       D      13       0   .init       
+     zero                                      E0FE       4       4       0   .init       
+     waiter3                                   E102       7       7       0   .init       
+     almostdone                                E109      36      54       0   .init       
+     mainLoop1                                 E13F       2       2       0   .init       
+     first                                     E141       4       4       0   .init       
+     waiter                                    E145       7       7       0   .init       
+     letsgo                                    E14C      1C      28       0   .init       
+     zero1                                     E168       4       4       0   .init       
+     secondo                                   E16C       2       2       0   .init       
+     JUMPERS                                   E16E      1C      28       0   .init       
+     second                                    E18A       4       4       0   .init       
+     waiter2                                   E18E       7       7       0   .init       
+     getout                                    E195      36      54       0   .init       
+     DecimalToHexToAscii                       E1CB      32      50       0   .init       
+     DebugBounce                               E1FD       5       5       0   .init       
+     loop3                                     E202       5       5       0   .init       
+     loop4                                     E207      13      19       0   .init       
+     MESSAGE1                                  E21A       9       9       0   .init       
+     L11                                       E223       E      14       0   .init       
+     OUTMSG1                                   E231       1       1       0   .init       
+     MESSAGE2                                  E232       7       7       0   .init       
+     L22                                       E239       E      14       0   .init       
+     OUTMSG2                                   E247       1       1       0   .init       
+     MESSAGE3                                  E248       7       7       0   .init       
+     L33                                       E24F       E      14       0   .init       
+     OUTMSG3                                   E25D       1       1       0   .init       
+     MESSAGE4                                  E25E       7       7       0   .init       
+     L44                                       E265       E      14       0   .init       
+     OUTMSG4                                   E273       1       1       0   .init       
+     MESSAGE5                                  E274       7       7       0   .init       
+     L55                                       E27B       E      14       0   .init       
+     OUTMSG5                                   E289       1       1       0   .init       
+     MESSAGE6                                  E28A       7       7       0   .init       
+     L66                                       E291       E      14       0   .init       
+     OUTMSG6                                   E29F       1       1       0   .init       
+     VAR_DELAY                                 E2A0       2       2       0   .init       
+     L1                                        E2A2       8       8       0   .init       
+     LCD_WRITE                                 E2AA       9       9       0   .init       
+     L2                                        E2B3       4       4       0   .init       
+     LCD_ADDR                                  E2B7       B      11       0   .init       
+     L4                                        E2C2       6       6       0   .init       
+     IIC_Startup_slave                         E2C8       F      15       0   .init       
+     _Viic                                     E2D7       D      13       0   .init       
+     Viic_slave                                E2E4       A      10       0   .init       
+     Viic_slave_iaas                           E2EE       8       8       0   .init       
+     Viic_slave_iaas2                          E2F6       7       7       0   .init       
+     Viic_slave_srw                            E2FD       8       8       0   .init       
+     Viic_slave_setTx                          E305       C      12       0   .init       
+     Viic_slave_setRx                          E311       9       9       0   .init       
+     Viic_slave_txRx                           E31A       8       8       0   .init       
+     Viic_slave_ack                            E322       8       8       0   .init       
+     Viic_slave_read                           E32A      12      18       0   .init       
+- VARIABLES:
+     FLAG                                        60       1       1       0   .text       
+     FLAG2                                       61       1       1       0   .text       
+     Storage                                     62       1       1       0   .text       
+     Temperature                                 63       1       1       0   .text       
+     Kelvin                                      64       1       1       0   .text       
+     BigDud                                      65       1       1       0   .text       
+     BigDudTemp                                  66       1       1       0   .text       
+     FULLER                                      67       1       1       0   .text       
+     UPPER                                       68       1       1       0   .text       
+     LOWER                                       69       1       1       0   .text       
+     Counter                                     6A       1       1       0   .text       
+     IIC_addr                                    6B       1       1       0   .text       
+     msgLength                                   6C       1       1       0   .text       
+     current                                     6D       1       1       0   .text       
+     IIC_MSG                                     6E       1       1       0   .text       
+     TIME                                        6F       1       1       0   .text       
+- LABELS:
+     __SEG_END_SSTACK                           140       0       0       1               
+
+*********************************************************************************************
+MODULE STATISTIC
+  Name                                      Data   Code  Const
+---------------------------------------------------------------------------------------------
+  main_asm.obj                                16    828      0
+  other                                       64      4      0
+
+*********************************************************************************************
+SECTION USE IN OBJECT-ALLOCATION SECTION
+---------------------------------------------------------------------------------------------
+SECTION: ".text"
+  FLAG FLAG2 Storage Temperature Kelvin BigDud BigDudTemp FULLER UPPER LOWER 
+  Counter IIC_addr msgLength current IIC_MSG TIME 
+SECTION: ".init"
+  MSG1 VAR00001 MSG2 VAR00002 MSG3 VAR00003 MSG4 VAR00004 MSG5 VAR00005 MSG6 
+  VAR00006 AddressWrite main _Startup mainLoop completed zero waiter3 
+  almostdone mainLoop1 first waiter letsgo zero1 secondo JUMPERS second waiter2 
+  getout DecimalToHexToAscii DebugBounce loop3 loop4 MESSAGE1 L11 OUTMSG1 
+  MESSAGE2 L22 OUTMSG2 MESSAGE3 L33 OUTMSG3 MESSAGE4 L44 OUTMSG4 MESSAGE5 L55 
+  OUTMSG5 MESSAGE6 L66 OUTMSG6 VAR_DELAY L1 LCD_WRITE L2 LCD_ADDR L4 
+  IIC_Startup_slave _Viic Viic_slave Viic_slave_iaas Viic_slave_iaas2 
+  Viic_slave_srw Viic_slave_setTx Viic_slave_setRx Viic_slave_txRx 
+  Viic_slave_ack Viic_slave_read 
+
+*********************************************************************************************
+OBJECT LIST SORTED BY ADDRESS
+     Name                                      Addr   hSize   dSize     Ref    Section   RLIB
+---------------------------------------------------------------------------------------------
+     FLAG                                        60       1       1       0   .text       
+     FLAG2                                       61       1       1       0   .text       
+     Storage                                     62       1       1       0   .text       
+     Temperature                                 63       1       1       0   .text       
+     Kelvin                                      64       1       1       0   .text       
+     BigDud                                      65       1       1       0   .text       
+     BigDudTemp                                  66       1       1       0   .text       
+     FULLER                                      67       1       1       0   .text       
+     UPPER                                       68       1       1       0   .text       
+     LOWER                                       69       1       1       0   .text       
+     Counter                                     6A       1       1       0   .text       
+     IIC_addr                                    6B       1       1       0   .text       
+     msgLength                                   6C       1       1       0   .text       
+     current                                     6D       1       1       0   .text       
+     IIC_MSG                                     6E       1       1       0   .text       
+     TIME                                        6F       1       1       0   .text       
+     MSG1                                      E000      10      16       0   .init       
+     VAR00001                                  E010       1       1       0   .init       
+     MSG2                                      E011       F      15       0   .init       
+     VAR00002                                  E020       1       1       0   .init       
+     MSG3                                      E021      10      16       0   .init       
+     VAR00003                                  E031       1       1       0   .init       
+     MSG4                                      E032      10      16       0   .init       
+     VAR00004                                  E042       1       1       0   .init       
+     MSG5                                      E043      10      16       0   .init       
+     VAR00005                                  E053       1       1       0   .init       
+     MSG6                                      E054       4       4       0   .init       
+     VAR00006                                  E058       1       1       0   .init       
+     AddressWrite                              E059       1       1       0   .init       
+     main                                      E05A       0       0       0   .init       
+     _Startup                                  E05A      90     144       0   .init       
+     mainLoop                                  E0EA       7       7       0   .init       
+     completed                                 E0F1       D      13       0   .init       
+     zero                                      E0FE       4       4       0   .init       
+     waiter3                                   E102       7       7       0   .init       
+     almostdone                                E109      36      54       0   .init       
+     mainLoop1                                 E13F       2       2       0   .init       
+     first                                     E141       4       4       0   .init       
+     waiter                                    E145       7       7       0   .init       
+     letsgo                                    E14C      1C      28       0   .init       
+     zero1                                     E168       4       4       0   .init       
+     secondo                                   E16C       2       2       0   .init       
+     JUMPERS                                   E16E      1C      28       0   .init       
+     second                                    E18A       4       4       0   .init       
+     waiter2                                   E18E       7       7       0   .init       
+     getout                                    E195      36      54       0   .init       
+     DecimalToHexToAscii                       E1CB      32      50       0   .init       
+     DebugBounce                               E1FD       5       5       0   .init       
+     loop3                                     E202       5       5       0   .init       
+     loop4                                     E207      13      19       0   .init       
+     MESSAGE1                                  E21A       9       9       0   .init       
+     L11                                       E223       E      14       0   .init       
+     OUTMSG1                                   E231       1       1       0   .init       
+     MESSAGE2                                  E232       7       7       0   .init       
+     L22                                       E239       E      14       0   .init       
+     OUTMSG2                                   E247       1       1       0   .init       
+     MESSAGE3                                  E248       7       7       0   .init       
+     L33                                       E24F       E      14       0   .init       
+     OUTMSG3                                   E25D       1       1       0   .init       
+     MESSAGE4                                  E25E       7       7       0   .init       
+     L44                                       E265       E      14       0   .init       
+     OUTMSG4                                   E273       1       1       0   .init       
+     MESSAGE5                                  E274       7       7       0   .init       
+     L55                                       E27B       E      14       0   .init       
+     OUTMSG5                                   E289       1       1       0   .init       
+     MESSAGE6                                  E28A       7       7       0   .init       
+     L66                                       E291       E      14       0   .init       
+     OUTMSG6                                   E29F       1       1       0   .init       
+     VAR_DELAY                                 E2A0       2       2       0   .init       
+     L1                                        E2A2       8       8       0   .init       
+     LCD_WRITE                                 E2AA       9       9       0   .init       
+     L2                                        E2B3       4       4       0   .init       
+     LCD_ADDR                                  E2B7       B      11       0   .init       
+     L4                                        E2C2       6       6       0   .init       
+     IIC_Startup_slave                         E2C8       F      15       0   .init       
+     _Viic                                     E2D7       D      13       0   .init       
+     Viic_slave                                E2E4       A      10       0   .init       
+     Viic_slave_iaas                           E2EE       8       8       0   .init       
+     Viic_slave_iaas2                          E2F6       7       7       0   .init       
+     Viic_slave_srw                            E2FD       8       8       0   .init       
+     Viic_slave_setTx                          E305       C      12       0   .init       
+     Viic_slave_setRx                          E311       9       9       0   .init       
+     Viic_slave_txRx                           E31A       8       8       0   .init       
+     Viic_slave_ack                            E322       8       8       0   .init       
+     Viic_slave_read                           E32A      12      18       0   .init       
+
+*********************************************************************************************
+UNUSED-OBJECTS SECTION
+---------------------------------------------------------------------------------------------
+
+*********************************************************************************************
+COPYDOWN SECTION
+---------------------------------------------------------------------------------------------
+
+*********************************************************************************************
+OBJECT-DEPENDENCIES SECTION
+---------------------------------------------------------------------------------------------
+
+*********************************************************************************************
+DEPENDENCY TREE
+*********************************************************************************************
+ main and _Startup Group
+ | 
+ +- main                
+ |    
+ +- _Startup            
+      
+*********************************************************************************************
+STATISTIC SECTION
+---------------------------------------------------------------------------------------------
+
+ExeFile:
+--------
+Number of blocks to be downloaded: 3
+Total size of all blocks to be downloaded: 832
+

@@ -1,0 +1,225 @@
+*** EVALUATION ***
+PROGRAM "lab1.abs"
+
+*********************************************************************************************
+TARGET SECTION
+---------------------------------------------------------------------------------------------
+Processor   : Freescale HC08
+Memory Model: SMALL
+File Format : ELF\DWARF 2.0
+Linker      : SmartLinker V-5.0.53 Build 17146, May 27 2017
+
+*********************************************************************************************
+FILE SECTION
+---------------------------------------------------------------------------------------------
+main_asm.obj                            Model: SMALL,         Lang: Assembler,     Compiler Version: Assembler for HC08 V-5.0.30 Build 17146, May 27 2017
+
+*********************************************************************************************
+STARTUP SECTION
+---------------------------------------------------------------------------------------------
+Entry point: 0xE000 (_Startup)
+
+*********************************************************************************************
+SECTION-ALLOCATION SECTION
+Section Name                    Size  Type     From       To       Segment
+---------------------------------------------------------------------------------------------
+main_asm__ORG00001                17   R/W       0x60       0x70   .absSeg0
+main_asm__ORG00002               638     R     0xE000     0xE27D   .absSeg1
+.stack                            64   R/W      0x100      0x13F   RAM
+.vectSeg2_vect                     6     R     0xFFD8     0xFFDD   .vectSeg2
+.vectSeg3_vect                     2     R     0xFFFE     0xFFFF   .vectSeg3
+
+Summary of section sizes per section type:
+READ_ONLY (R):         286 (dec:      646)
+READ_WRITE (R/W):       51 (dec:       81)
+
+*********************************************************************************************
+VECTOR-ALLOCATION SECTION
+    Address     InitValue   InitFunction
+---------------------------------------------------------------------------------------------
+     0xFFD8        0xE13B   External
+     0xFFDA        0xE259   Column
+     0xFFDC        0xE1B8   _Viic
+     0xFFFE        0xE000   _Startup
+
+*********************************************************************************************
+OBJECT-ALLOCATION SECTION
+     Name               Module                 Addr   hSize   dSize     Ref    Section   RLIB
+---------------------------------------------------------------------------------------------
+MODULE:                 -- main_asm.obj --
+- PROCEDURES:
+     _Startup                                  E000      4E      78       0   .init       
+     main                                      E000       0       0       0   .init       
+     mainLoop                                  E04E       B      11       0   .init       
+     Begin                                     E059      49      73       0   .init       
+     END                                       E0A2      1C      28       0   .init       
+     Internal                                  E0BE       7       7       0   .init       
+     Inf                                       E0C5      42      66       0   .init       
+     ExternalBegin                             E107       7       7       0   .init       
+     Infinite                                  E10E      2D      45       0   .init       
+     External                                  E13B      16      22       0   .init       
+     Acquire                                   E151      21      33       0   .init       
+     GiveMeA1                                  E172       7       7       0   .init       
+     GiveMeA2                                  E179       7       7       0   .init       
+     GiveMeA3                                  E180       7       7       0   .init       
+     GiveMeA4                                  E187       7       7       0   .init       
+     GiveMeA5                                  E18E       7       7       0   .init       
+     GiveMeA6                                  E195       7       7       0   .init       
+     GiveMeA7                                  E19C       7       7       0   .init       
+     GiveMeA8                                  E1A3       7       7       0   .init       
+     GiveMeA9                                  E1AA       7       7       0   .init       
+     GiveMeA0                                  E1B1       7       7       0   .init       
+     _Viic                                     E1B8       6       6       0   .init       
+     Viic_master                               E1BE       5       5       0   .init       
+     Viic_master_TX                            E1C3       B      11       0   .init       
+     Viic_master_rxAck                         E1CE       8       8       0   .init       
+     Viic_master_EoAC                          E1D6      10      16       0   .init       
+     Viic_master_toRxMode                      E1E6       5       5       0   .init       
+     Viic_master_RX                            E1EB       B      11       0   .init       
+     Viic_master_rxStop                        E1F6       4       4       0   .init       
+     Viic_master_txAck                         E1FA       4       4       0   .init       
+     Viic_master_readData                      E1FE       D      13       0   .init       
+     IIC_Startup_Master                        E20B       9       9       0   .init       
+     IIC_DataWrite                             E214       B      11       0   .init       
+     Delay                                     E21F       5       5       0   .init       
+     loop1                                     E224       5       5       0   .init       
+     loop2                                     E229      13      19       0   .init       
+     DebugBounce                               E23C       5       5       0   .init       
+     loop3                                     E241       5       5       0   .init       
+     loop4                                     E246      13      19       0   .init       
+     Column                                    E259      25      37       0   .init       
+- VARIABLES:
+     RowPress                                    60       1       1       0   .text       
+     ColumnPress                                 61       1       1       0   .text       
+     Total                                       62       1       1       0   .text       
+     Flag                                        63       1       1       0   .text       
+     TempFlag                                    64       1       1       0   .text       
+     Temp                                        65       1       1       0   .text       
+     Number                                      66       1       1       0   .text       
+     Temperature                                 67       1       1       0   .text       
+     Temperature2                                68       1       1       0   .text       
+     Count                                       69       1       1       0   .text       
+     Carry                                       6A       1       1       0   .text       
+     FullKeypad                                  6B       1       1       0   .text       
+     IIC_addr                                    6C       1       1       0   .text       
+     IIC_LCD                                     6D       1       1       0   .text       
+     msgLength                                   6E       1       1       0   .text       
+     current                                     6F       1       1       0   .text       
+     IIC_msg                                     70       1       1       0   .text       
+- LABELS:
+     __SEG_END_SSTACK                           140       0       0       1               
+
+*********************************************************************************************
+MODULE STATISTIC
+  Name                                      Data   Code  Const
+---------------------------------------------------------------------------------------------
+  main_asm.obj                                17    638      0
+  other                                       64      8      0
+
+*********************************************************************************************
+SECTION USE IN OBJECT-ALLOCATION SECTION
+---------------------------------------------------------------------------------------------
+SECTION: ".text"
+  RowPress ColumnPress Total Flag TempFlag Temp Number Temperature 
+  Temperature2 Count Carry FullKeypad IIC_addr IIC_LCD msgLength current 
+  IIC_msg 
+SECTION: ".init"
+  main _Startup mainLoop Begin END Internal Inf ExternalBegin Infinite 
+  External Acquire GiveMeA1 GiveMeA2 GiveMeA3 GiveMeA4 GiveMeA5 GiveMeA6 
+  GiveMeA7 GiveMeA8 GiveMeA9 GiveMeA0 _Viic Viic_master Viic_master_TX 
+  Viic_master_rxAck Viic_master_EoAC Viic_master_toRxMode Viic_master_RX 
+  Viic_master_rxStop Viic_master_txAck Viic_master_readData IIC_Startup_Master 
+  IIC_DataWrite Delay loop1 loop2 DebugBounce loop3 loop4 Column 
+
+*********************************************************************************************
+OBJECT LIST SORTED BY ADDRESS
+     Name                                      Addr   hSize   dSize     Ref    Section   RLIB
+---------------------------------------------------------------------------------------------
+     RowPress                                    60       1       1       0   .text       
+     ColumnPress                                 61       1       1       0   .text       
+     Total                                       62       1       1       0   .text       
+     Flag                                        63       1       1       0   .text       
+     TempFlag                                    64       1       1       0   .text       
+     Temp                                        65       1       1       0   .text       
+     Number                                      66       1       1       0   .text       
+     Temperature                                 67       1       1       0   .text       
+     Temperature2                                68       1       1       0   .text       
+     Count                                       69       1       1       0   .text       
+     Carry                                       6A       1       1       0   .text       
+     FullKeypad                                  6B       1       1       0   .text       
+     IIC_addr                                    6C       1       1       0   .text       
+     IIC_LCD                                     6D       1       1       0   .text       
+     msgLength                                   6E       1       1       0   .text       
+     current                                     6F       1       1       0   .text       
+     IIC_msg                                     70       1       1       0   .text       
+     main                                      E000       0       0       0   .init       
+     _Startup                                  E000      4E      78       0   .init       
+     mainLoop                                  E04E       B      11       0   .init       
+     Begin                                     E059      49      73       0   .init       
+     END                                       E0A2      1C      28       0   .init       
+     Internal                                  E0BE       7       7       0   .init       
+     Inf                                       E0C5      42      66       0   .init       
+     ExternalBegin                             E107       7       7       0   .init       
+     Infinite                                  E10E      2D      45       0   .init       
+     External                                  E13B      16      22       0   .init       
+     Acquire                                   E151      21      33       0   .init       
+     GiveMeA1                                  E172       7       7       0   .init       
+     GiveMeA2                                  E179       7       7       0   .init       
+     GiveMeA3                                  E180       7       7       0   .init       
+     GiveMeA4                                  E187       7       7       0   .init       
+     GiveMeA5                                  E18E       7       7       0   .init       
+     GiveMeA6                                  E195       7       7       0   .init       
+     GiveMeA7                                  E19C       7       7       0   .init       
+     GiveMeA8                                  E1A3       7       7       0   .init       
+     GiveMeA9                                  E1AA       7       7       0   .init       
+     GiveMeA0                                  E1B1       7       7       0   .init       
+     _Viic                                     E1B8       6       6       0   .init       
+     Viic_master                               E1BE       5       5       0   .init       
+     Viic_master_TX                            E1C3       B      11       0   .init       
+     Viic_master_rxAck                         E1CE       8       8       0   .init       
+     Viic_master_EoAC                          E1D6      10      16       0   .init       
+     Viic_master_toRxMode                      E1E6       5       5       0   .init       
+     Viic_master_RX                            E1EB       B      11       0   .init       
+     Viic_master_rxStop                        E1F6       4       4       0   .init       
+     Viic_master_txAck                         E1FA       4       4       0   .init       
+     Viic_master_readData                      E1FE       D      13       0   .init       
+     IIC_Startup_Master                        E20B       9       9       0   .init       
+     IIC_DataWrite                             E214       B      11       0   .init       
+     Delay                                     E21F       5       5       0   .init       
+     loop1                                     E224       5       5       0   .init       
+     loop2                                     E229      13      19       0   .init       
+     DebugBounce                               E23C       5       5       0   .init       
+     loop3                                     E241       5       5       0   .init       
+     loop4                                     E246      13      19       0   .init       
+     Column                                    E259      25      37       0   .init       
+
+*********************************************************************************************
+UNUSED-OBJECTS SECTION
+---------------------------------------------------------------------------------------------
+
+*********************************************************************************************
+COPYDOWN SECTION
+---------------------------------------------------------------------------------------------
+
+*********************************************************************************************
+OBJECT-DEPENDENCIES SECTION
+---------------------------------------------------------------------------------------------
+
+*********************************************************************************************
+DEPENDENCY TREE
+*********************************************************************************************
+ main and _Startup Group
+ | 
+ +- main                
+ |    
+ +- _Startup            
+      
+*********************************************************************************************
+STATISTIC SECTION
+---------------------------------------------------------------------------------------------
+
+ExeFile:
+--------
+Number of blocks to be downloaded: 3
+Total size of all blocks to be downloaded: 646
+

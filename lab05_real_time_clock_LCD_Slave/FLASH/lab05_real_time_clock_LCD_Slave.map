@@ -1,0 +1,220 @@
+*** EVALUATION ***
+PROGRAM "lab05_real_time_clock_LCD_Slave.abs"
+
+*********************************************************************************************
+TARGET SECTION
+---------------------------------------------------------------------------------------------
+Processor   : Freescale HC08
+Memory Model: SMALL
+File Format : ELF\DWARF 2.0
+Linker      : SmartLinker V-5.0.53 Build 17146, May 27 2017
+
+*********************************************************************************************
+FILE SECTION
+---------------------------------------------------------------------------------------------
+main_asm.obj                            Model: SMALL,         Lang: Assembler,     Compiler Version: Assembler for HC08 V-5.0.30 Build 17146, May 27 2017
+
+*********************************************************************************************
+STARTUP SECTION
+---------------------------------------------------------------------------------------------
+Entry point: 0xE022 (_Startup)
+
+*********************************************************************************************
+SECTION-ALLOCATION SECTION
+Section Name                    Size  Type     From       To       Segment
+---------------------------------------------------------------------------------------------
+main_asm__ORG00001                27   R/W       0x60       0x7A   .absSeg0
+main_asm__ORG00002               655     R     0xE000     0xE28E   .absSeg1
+.stack                            64   R/W      0x100      0x13F   RAM
+.vectSeg2_vect                     2     R     0xFFDC     0xFFDD   .vectSeg2
+.vectSeg3_vect                     2     R     0xFFFE     0xFFFF   .vectSeg3
+
+Summary of section sizes per section type:
+READ_ONLY (R):         293 (dec:      659)
+READ_WRITE (R/W):       5B (dec:       91)
+
+*********************************************************************************************
+VECTOR-ALLOCATION SECTION
+    Address     InitValue   InitFunction
+---------------------------------------------------------------------------------------------
+     0xFFDC        0xE22A   _Viic
+     0xFFFE        0xE022   _Startup
+
+*********************************************************************************************
+OBJECT-ALLOCATION SECTION
+     Name               Module                 Addr   hSize   dSize     Ref    Section   RLIB
+---------------------------------------------------------------------------------------------
+MODULE:                 -- main_asm.obj --
+- PROCEDURES:
+     MSG1                                      E000       D      13       0   .init       
+     VAR00001                                  E00D       1       1       0   .init       
+     MSG2                                      E00E       D      13       0   .init       
+     VAR00002                                  E01B       1       1       0   .init       
+     AddressWrite                              E01C       6       6       0   .init       
+     _Startup                                  E022      90     144       0   .init       
+     main                                      E022       0       0       0   .init       
+     mainLoop                                  E0B2       A      10       0   .init       
+     cool                                      E0BC      25      37       0   .init       
+     cool1                                     E0E1      4C      76       0   .init       
+     mainLoop1                                 E12D       2       2       0   .init       
+     JUMPO                                     E12F       C      12       0   .init       
+     NEW                                       E13B      13      19       0   .init       
+     NEW1                                      E14E      52      82       0   .init       
+     INT                                       E1A0       8       8       0   .init       
+     DebugBounce                               E1A8       5       5       0   .init       
+     loop3                                     E1AD       5       5       0   .init       
+     loop4                                     E1B2      13      19       0   .init       
+     MESSAGE1                                  E1C5       9       9       0   .init       
+     L3                                        E1CE       E      14       0   .init       
+     OUTMSG1                                   E1DC       1       1       0   .init       
+     MESSAGE2                                  E1DD       7       7       0   .init       
+     L44                                       E1E4       E      14       0   .init       
+     OUTMSG2                                   E1F2       1       1       0   .init       
+     VAR_DELAY                                 E1F3       2       2       0   .init       
+     L1                                        E1F5       8       8       0   .init       
+     LCD_WRITE                                 E1FD       9       9       0   .init       
+     L2                                        E206       4       4       0   .init       
+     LCD_ADDR                                  E20A       B      11       0   .init       
+     L4                                        E215       6       6       0   .init       
+     IIC_Startup_slave                         E21B       F      15       0   .init       
+     _Viic                                     E22A       D      13       0   .init       
+     Viic_slave                                E237       A      10       0   .init       
+     Viic_slave_iaas                           E241       8       8       0   .init       
+     Viic_slave_iaas2                          E249       7       7       0   .init       
+     Viic_slave_srw                            E250       8       8       0   .init       
+     Viic_slave_setTx                          E258       C      12       0   .init       
+     Viic_slave_setRx                          E264       9       9       0   .init       
+     Viic_slave_txRx                           E26D       8       8       0   .init       
+     Viic_slave_ack                            E275       8       8       0   .init       
+     Viic_slave_read                           E27D      12      18       0   .init       
+- VARIABLES:
+     FLAG                                        60       1       1       0   .text       
+     FLAG2                                       61       1       1       0   .text       
+     Storage                                     62       1       1       0   .text       
+     Temperature                                 63       1       1       0   .text       
+     Kelvin                                      64       1       1       0   .text       
+     BigDud                                      65       1       1       0   .text       
+     FULLER                                      66       1       1       0   .text       
+     UPPER                                       67       1       1       0   .text       
+     LOWER                                       68       1       1       0   .text       
+     Counter                                     69       1       1       0   .text       
+     IIC_addr                                    6A       1       1       0   .text       
+     msgLength                                   6B       7       7       0   .text       
+     current                                     72       1       1       0   .text       
+     IIC_MSG                                     73       7       7       0   .text       
+     TIME                                        7A       1       1       0   .text       
+- LABELS:
+     __SEG_END_SSTACK                           140       0       0       1               
+
+*********************************************************************************************
+MODULE STATISTIC
+  Name                                      Data   Code  Const
+---------------------------------------------------------------------------------------------
+  main_asm.obj                                27    655      0
+  other                                       64      4      0
+
+*********************************************************************************************
+SECTION USE IN OBJECT-ALLOCATION SECTION
+---------------------------------------------------------------------------------------------
+SECTION: ".text"
+  FLAG FLAG2 Storage Temperature Kelvin BigDud FULLER UPPER LOWER Counter 
+  IIC_addr msgLength current IIC_MSG TIME 
+SECTION: ".init"
+  MSG1 VAR00001 MSG2 VAR00002 AddressWrite main _Startup mainLoop cool cool1 
+  mainLoop1 JUMPO NEW NEW1 INT DebugBounce loop3 loop4 MESSAGE1 L3 OUTMSG1 
+  MESSAGE2 L44 OUTMSG2 VAR_DELAY L1 LCD_WRITE L2 LCD_ADDR L4 IIC_Startup_slave 
+  _Viic Viic_slave Viic_slave_iaas Viic_slave_iaas2 Viic_slave_srw 
+  Viic_slave_setTx Viic_slave_setRx Viic_slave_txRx Viic_slave_ack 
+  Viic_slave_read 
+
+*********************************************************************************************
+OBJECT LIST SORTED BY ADDRESS
+     Name                                      Addr   hSize   dSize     Ref    Section   RLIB
+---------------------------------------------------------------------------------------------
+     FLAG                                        60       1       1       0   .text       
+     FLAG2                                       61       1       1       0   .text       
+     Storage                                     62       1       1       0   .text       
+     Temperature                                 63       1       1       0   .text       
+     Kelvin                                      64       1       1       0   .text       
+     BigDud                                      65       1       1       0   .text       
+     FULLER                                      66       1       1       0   .text       
+     UPPER                                       67       1       1       0   .text       
+     LOWER                                       68       1       1       0   .text       
+     Counter                                     69       1       1       0   .text       
+     IIC_addr                                    6A       1       1       0   .text       
+     msgLength                                   6B       7       7       0   .text       
+     current                                     72       1       1       0   .text       
+     IIC_MSG                                     73       7       7       0   .text       
+     TIME                                        7A       1       1       0   .text       
+     MSG1                                      E000       D      13       0   .init       
+     VAR00001                                  E00D       1       1       0   .init       
+     MSG2                                      E00E       D      13       0   .init       
+     VAR00002                                  E01B       1       1       0   .init       
+     AddressWrite                              E01C       6       6       0   .init       
+     main                                      E022       0       0       0   .init       
+     _Startup                                  E022      90     144       0   .init       
+     mainLoop                                  E0B2       A      10       0   .init       
+     cool                                      E0BC      25      37       0   .init       
+     cool1                                     E0E1      4C      76       0   .init       
+     mainLoop1                                 E12D       2       2       0   .init       
+     JUMPO                                     E12F       C      12       0   .init       
+     NEW                                       E13B      13      19       0   .init       
+     NEW1                                      E14E      52      82       0   .init       
+     INT                                       E1A0       8       8       0   .init       
+     DebugBounce                               E1A8       5       5       0   .init       
+     loop3                                     E1AD       5       5       0   .init       
+     loop4                                     E1B2      13      19       0   .init       
+     MESSAGE1                                  E1C5       9       9       0   .init       
+     L3                                        E1CE       E      14       0   .init       
+     OUTMSG1                                   E1DC       1       1       0   .init       
+     MESSAGE2                                  E1DD       7       7       0   .init       
+     L44                                       E1E4       E      14       0   .init       
+     OUTMSG2                                   E1F2       1       1       0   .init       
+     VAR_DELAY                                 E1F3       2       2       0   .init       
+     L1                                        E1F5       8       8       0   .init       
+     LCD_WRITE                                 E1FD       9       9       0   .init       
+     L2                                        E206       4       4       0   .init       
+     LCD_ADDR                                  E20A       B      11       0   .init       
+     L4                                        E215       6       6       0   .init       
+     IIC_Startup_slave                         E21B       F      15       0   .init       
+     _Viic                                     E22A       D      13       0   .init       
+     Viic_slave                                E237       A      10       0   .init       
+     Viic_slave_iaas                           E241       8       8       0   .init       
+     Viic_slave_iaas2                          E249       7       7       0   .init       
+     Viic_slave_srw                            E250       8       8       0   .init       
+     Viic_slave_setTx                          E258       C      12       0   .init       
+     Viic_slave_setRx                          E264       9       9       0   .init       
+     Viic_slave_txRx                           E26D       8       8       0   .init       
+     Viic_slave_ack                            E275       8       8       0   .init       
+     Viic_slave_read                           E27D      12      18       0   .init       
+
+*********************************************************************************************
+UNUSED-OBJECTS SECTION
+---------------------------------------------------------------------------------------------
+
+*********************************************************************************************
+COPYDOWN SECTION
+---------------------------------------------------------------------------------------------
+
+*********************************************************************************************
+OBJECT-DEPENDENCIES SECTION
+---------------------------------------------------------------------------------------------
+
+*********************************************************************************************
+DEPENDENCY TREE
+*********************************************************************************************
+ main and _Startup Group
+ | 
+ +- main                
+ |    
+ +- _Startup            
+      
+*********************************************************************************************
+STATISTIC SECTION
+---------------------------------------------------------------------------------------------
+
+ExeFile:
+--------
+Number of blocks to be downloaded: 3
+Total size of all blocks to be downloaded: 659
+
